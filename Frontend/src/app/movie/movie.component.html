@@ -1,0 +1,20 @@
+<div class="movie-container">
+   <h2>Movie List</h2>
+   <div *ngIf="movies.length > 0; else noMovies">
+     <ul>
+       <li *ngFor="let movie of movies">
+         <div class="movie-card">
+           <h3>{{ movie.title }}</h3>
+           <p><strong>Genre:</strong> {{ movie.genre }}</p>
+           <p><strong>Release Year:</strong> {{ movie.releaseYear }}</p>
+           <p><strong>Director:</strong> {{ movie.director }}</p>
+           <p><strong>Description:</strong> {{ movie.description }}</p>
+         </div>
+       </li>
+     </ul>
+   </div>
+   <ng-template #noMovies>
+     <p>No movies available.</p>
+   </ng-template>
+ </div>
+ 

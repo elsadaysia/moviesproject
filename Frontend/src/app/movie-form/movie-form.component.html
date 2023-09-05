@@ -1,0 +1,81 @@
+<div class="movie">
+   <h2 style="text-align: center; " >Add Movie</h2>
+   <form (submit)="addMovie()" style="border: 1px solid #ccc ; padding: 20px ; max-width: 500px; ">
+     <div class="form-group">
+       <div class="input-group">
+         <span class="input-group-text">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-card-text" viewBox="0 0 16 16">
+             <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-11zM1 1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-11z"/>
+             <path d="M1 11.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 0-.5.5v3zM2 10V8h2v2H2z"/>
+           </svg>
+         </span>
+         <input [(ngModel)]="title" name="title" placeholder="Title" required class="form-control" />
+       </div>
+     </div><br>
+
+ 
+     <div class="form-group">
+       <div class="input-group">
+         <span class="input-group-text">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+             <path d="M6 1a.5.5 0 0 1 .5.5V2h8.5a.5.5 0 0 1 .5.5V15a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 .5-.5H6z"/>
+             <path d="M6 1V2h8v11H1V1h5z"/>
+             <path d="M6.5 12a.5.5 0 0 1 .5.5V13h6V2h-6v.5a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5V.5a.5.5 0 0 1 .5-.5H6.5a.5.5 0 0 1 .5.5V1h5a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5H6.5z"/>
+             <path d="M2 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 .5.5V5H2v-.5zM2 7.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 .5.5V8H2v-.5zM2 10.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 .5.5V11H2v-.5zM7 5.5a.5.5 0 0 1-.5-.5V4h4v.5a.5.5 0 0 1-.5.5H7z"/>
+           </svg>
+         </span><br>
+         <textarea [(ngModel)]="synopsis" name="synopsis" placeholder="Synopsis" required class="form-control"></textarea>
+       </div>
+     </div><br>
+ 
+     <div class="form-group">
+       <div class="input-group">
+         <span class="input-group-text">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-link" viewBox="0 0 16 16">
+             <path d="M2.93 4.93a1 1 0 1 1 1.41-1.41L10 10l-1.47 1.47a1 1 0 0 1-1.41-1.41L7.59 9.5H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h3.59l-1.06-1.06a1 1 0 0 1 1.41-1.41L10 13l1.47-1.47a1 1 0 0 1 1.41 1.41L12.41 15H16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H12a2 2 0 0 0-2 2v1.59l-1.06-1.06a1 1 0 0 1 0-1.41 1 1 0 0 1 0 0zM4 4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h3.59l-1.06-1.06a1 1 0 0 1 1.41-1.41L10 7l1.47-1.47a1 1 0 0 1 1.41 1.41L12.41 9H16V6a2 2 0 0 0-2-2h-3.41l1.06 1.06a1 1 0 0 1-1.41 1.41L10 5l-1.47 1.47a1 1 0 0 1-1.41-1.41L7.59 4H4z"/>
+           </svg>
+         </span>
+         <input [(ngModel)]="trailerurl" name="trailerurl" placeholder="Trailer URL" required class="form-control" />
+       </div>
+     </div><br>
+ 
+     <div class="form-group">
+       <div class="input-group">
+         <span class="input-group-text">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-image" viewBox="0 0 16 16">
+             <path d="M5.293 1.293a1 1 0 0 1 1.414 0l8 8a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0l-8-8a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0zM6 2.414L2.414 6 6 9.586 9.586 6 6 2.414z"/>
+             <path d="M6 11a5 5 0 0 1 5-5 5 5 0 0 1 5 5h-2a3 3 0 0 0-3-3 3 3 0 0 0-3 3H6zM1 11a7 7 0 0 1 7-7 7 7 0 0 1 7 7h-2a5 5 0 0 0-5-5 5 5 0 0 0-5 5H1z"/>
+           </svg>
+         </span>
+         <input [(ngModel)]="imgurl" name="imgurl" placeholder="Image URL" required class="form-control" />
+       </div>
+     </div><br>
+ 
+     <div class="form-group">
+       <div class="input-group">
+         <span class="input-group-text">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-star-fill" viewBox="0 0 16 16">
+             <path d="M7.82.694a1 1 0 0 1 1.16 0l2.55 1.47 1.47 2.55a1 1 0 0 1-.29 1.09l-2.05 2.01.48 2.82a1 1 0 0 1-.41.97l-2.64 1.47-2.64-1.47a1 1 0 0 1-.41-.98l.48-2.82-2.05-2.01a1 1 0 0 1-.29-1.09l1.47-2.55 2.55-1.47a1 1 0 0 1 1.09.29z"/>
+           </svg>
+         </span>
+         <input [(ngModel)]="rating" name="rating" placeholder="Rating" required class="form-control" />
+       </div>
+     </div><br>
+ 
+     <div class="form-group">
+       <div class="input-group">
+         <span class="input-group-text">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-clock-fill" viewBox="0 0 16 16">
+             <path d="M7.293 1.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L8 3.414 2.293 9.207a1 1 0 0 1-1.414-1.414l5-5z"/>
+             <path d="M7 0h2v8H7z"/>
+           </svg>
+         </span>
+         <input [(ngModel)]="status" name="rating" placeholder="status" required class="form-control" />
+       </div>
+     </div><br>
+     <div class="form-group text-center">
+      <button type="submit" class="btn btn-danger">Add Movie</button>
+    </div>
+   </form>
+ </div>
+ 

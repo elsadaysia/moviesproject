@@ -1,0 +1,19 @@
+.login-container {
+   max-width: 400px;
+   margin: 40px auto;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+ }
+ 
+ .form-group {
+   margin-bottom: 15px;
+ }
+ 
+ .btn-danger {
+   width: 100%;
+ }
+
+ .text{
+  text-align: center;
+ }

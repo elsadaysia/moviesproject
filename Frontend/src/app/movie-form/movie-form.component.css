@@ -1,0 +1,20 @@
+.movie {
+   border: 2px solid #ccc;
+   padding: 20px;
+   max-width: 400px;
+   margin: 0 auto;
+   text-align: center;
+ }
+ 
+ .movie-form .form-group {
+   margin-bottom: 15px;
+ }
+ 
+ .movie-form .btn {
+   width: 100%;
+ }
+ 
+ .text-movie {
+   text-align: center;
+ }
+ 
