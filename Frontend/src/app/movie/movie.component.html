@@ -1,20 +1,54 @@
-<div class="movie-container">
-   <h2>Movie List</h2>
-   <div *ngIf="movies.length > 0; else noMovies">
-     <ul>
-       <li *ngFor="let movie of movies">
-         <div class="movie-card">
-           <h3>{{ movie.title }}</h3>
-           <p><strong>Genre:</strong> {{ movie.genre }}</p>
-           <p><strong>Release Year:</strong> {{ movie.releaseYear }}</p>
-           <p><strong>Director:</strong> {{ movie.director }}</p>
-           <p><strong>Description:</strong> {{ movie.description }}</p>
-         </div>
-       </li>
-     </ul>
-   </div>
-   <ng-template #noMovies>
-     <p>No movies available.</p>
-   </ng-template>
- </div>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  
+<div class="container">
+  <h2 class="mt-4 mb-4">Movie List</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <a routerLink="/addmovie" class="btn btn-danger mb-3">Add Movie</a> &nbsp;
+      <a routerLink="/bookmark" class="btn btn-danger mb-3">Bookmarks</a>
+    </div>
+  </div>  
+
+  <div class="row">
+    <ng-container *ngIf="movies.length > 0; else noMovies">
+      <div class="col-md-4" *ngFor="let movie of movies">
+        <div class="card mb-4">
+          <!-- Movie Image -->
+          <!-- <img src="{{ movie.imgurl }}" class="card-img-top" alt="{{ movie.title }}"> -->
+
+          <div class="card-body">
+            <!-- Movie Title -->
+            <h5 class="card-title">{{ movie.title }}</h5>
+            
+            <!-- Synopsis -->
+            <p class="card-text"><strong>Synopsis:</strong> {{ movie.synopsis }}</p>
+
+            <!-- Trailer URL -->
+            <p class="card-text"><strong>Trailer:</strong> <a href="{{ movie.trailerurl }}" target="_blank">{{ movie.trailerurl }}</a></p>
+
+            <!-- Image URL with truncation -->
+            <!-- <p class="card-text"><strong>Img URL:</strong> <span class="text-truncate" style="max-width: 150px;">{{ movie.imgurl }}</span></p> -->
+
+            <!-- Rating -->
+            <p class="card-text"><strong>Rating:</strong> {{ movie.rating }}</p>
+
+            <!-- Status -->
+            <p class="card-text"><strong>Status:</strong> {{ movie.status }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #noMovies>
+      <p class="col-md-12">No movies available.</p>
+    </ng-template>
+  </div>
+</div>
+</body>
+</html>

@@ -134,7 +134,7 @@ app
       //middleware
       (req, res) => {
          //fetch data dari header 'token' kemudian disimpan dalam variabel konstan bernama 'token
-         console.log('line 134',req)
+         // console.log('line 134',req)
          const token = req.get('token')
          // if token is empty
          if (!token) {

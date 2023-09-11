@@ -1,0 +1,57 @@
+
+ .movie{
+   text-align: center;
+ }
+   /* Container Styles */
+  .container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Movie Card Styles */
+  .card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  /* Movie Title Styles */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Synopsis Styles */
+  .card-text strong {
+    color: #007bff;
+  }
+
+  /* Buttons Styles */
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+  }
+
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+
+  /* No Movies Message Styles */
+  .no-movies-message {
+    font-size: 1.2rem;
+    color: #777;
+  }
+
+  /* Truncated URL Styles */
+  .text-truncate {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }

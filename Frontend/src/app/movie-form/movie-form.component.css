@@ -1,20 +1,43 @@
 .movie {
-   border: 2px solid #ccc;
-   padding: 20px;
-   max-width: 400px;
-   margin: 0 auto;
-   text-align: center;
- }
- 
- .movie-form .form-group {
-   margin-bottom: 15px;
- }
- 
- .movie-form .btn {
-   width: 100%;
- }
- 
- .text-movie {
-   text-align: center;
- }
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.btn-danger {
+  width: 100%;
+}
+
+/* Style for input-group icons */
+.input-group-text {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+/* Style for form inputs */
+.form-control {
+  border-color: #dc3545;
+}
+
+/* Style for form inputs on focus */
+.form-control:focus {
+  border-color: #dc3545;
+  box-shadow: none;
+}

@@ -1,1 +1,36 @@
-<p>movie-detail works!</p>
+<!-- movie-detail.component.html -->
+
+<div class="detail-container">
+   <h3>Movie Bookmark</h3>
+ 
+   <div *ngIf="movieId" class="movie-details">
+     <h2>{{ movieTitle }}</h2>
+   </div>
+ 
+   <div *ngIf="errorMessage" class="alert alert-danger">
+     {{ errorMessage }}
+   </div>
+ 
+   <div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+  </div>
+  
+  
+ 
+   <!-- Bookmark Movie Form -->
+   <form (submit)="bookmarkMovie()">
+     <div class="form-group">
+       <label for="movieId">Movie ID:</label>
+       <input
+         type="text"
+         class="form-control"
+         id="movieId"
+         name="movieId"
+         [(ngModel)]="movieId"
+         required
+       />
+     </div>
+     <button type="submit" class="btn btn-danger">Bookmark Movie</button>
+   </form>
+ </div>
+ 

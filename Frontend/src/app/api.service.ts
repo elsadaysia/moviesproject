@@ -48,6 +48,7 @@ export class ApiService {
       })
     )
   }
+  
   login(credentials: { email: string; password: string }): Observable<any> {
     const url = `${this.apiUrl}/login`;
     return this.http.post(url, credentials);
@@ -59,11 +60,20 @@ export class ApiService {
   }
 
   bookmarkMovie(movieId: string, token: string): Observable<any> {
-    const headers = new HttpHeaders().set('token', token);
+    const headers = new HttpHeaders()
+      .set('Accept', 'application/json')
+      .set('Content-Type', 'application/json')
+      .set('Access-Control-Allow-Origin', '*')
+      .set('Token', token);
+  
+    console.log('this is error', token);
+    console.log(headers)
+  
     return this.http.post<any>(
       `${this.apiUrl}/bookmark/${movieId}`,
       {},
       { headers }
     );
   }
+  
 }

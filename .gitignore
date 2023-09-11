@@ -36,7 +36,7 @@ libpeerconnection.log
 .testem.log
 typings/
 connect.lock
-
+/Frontend/node_modules
 /Backend/node_modules
 # System files
 .DS_Store
